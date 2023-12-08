@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>商品选择</title>
+</head>
+<body>
+
+  <h1>请选择您感兴趣的商品类型：</h1>
+
+  <form action="#" method="post">
+    <label for="productType">选择商品类型：</label>
+    <select id="productType" name="productType">
+      <option value="clothes">衣服</option>
+      <option value="electronics">电子产品</option>
+      <option value="food">食品</option>
+    </select>
+    <br><br>
+
+    <input type="submit" value="提交">
+  </form>
+
+  <script>
+    // 当表单提交时，获取所选商品类型的值
+    document.querySelector('form').addEventListener('submit', function(event) {
+      event.preventDefault();
+      const selectedProductType = document.getElementById('productType').value;
+      alert(`您选择的商品类型是：${selectedProductType}`);
+      // 可以在此处执行其他操作，比如根据所选类型显示不同的商品列表等
+    });
+  </script>
+
+</body>
+</html>
