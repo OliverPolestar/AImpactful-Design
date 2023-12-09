@@ -1,33 +1,81 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>demo演示</title>
-    <link rel="stylesheet" href="css/style.css" />
+  <meta charset="UTF-8">
+  <title>个人主页</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+      color: #333;
+    }
+    header {
+      background-color: #007bff;
+      color: #fff;
+      padding: 30px 0;
+      text-align: center;
+    }
+    h1 {
+      margin: 0;
+      font-size: 36px;
+    }
+    nav ul {
+      list-style: none;
+      padding: 0;
+      text-align: center;
+    }
+    nav ul li {
+      display: inline;
+      margin: 0 10px;
+    }
+    section {
+      padding: 50px 20px;
+      text-align: center;
+    }
+    footer {
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+      padding: 10px 0;
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+    }
+  </style>
 </head>
 <body>
-<!-- 顶部导航 -->
-<div class="headerpage"></div>
-<!--顶部导航 over-->    
 
-<!--中部主体--> 
-    <p>···代码省略···</p>
-<!--中部主体 over-->  
+  <header>
+    <h1>你的姓名</h1>
+    <nav>
+      <ul>
+        <li><a href="#about">关于我</a></li>
+        <li><a href="#portfolio">作品集</a></li>
+        <li><a href="#contact">联系我</a></li>
+      </ul>
+    </nav>
+  </header>
 
-<!--footer-->  
-<div class="footerpage"></div>
-<!--footer over-->
+  <section id="about">
+    <h2>关于我</h2>
+    <p>在这里写一段简短的个人介绍或自我描述。</p>
+  </section>
 
-<script src="js/jquery.min.js"></script>
-<script>
-    $(function(){
-        /*公共部分
-         * 导航栏
-         * footer CopyRight
-         */
-        $(".headerpage").load("header.html");
-        $(".footerpage").load("footer.html");
-    });
-</script>
+  <section id="portfolio">
+    <h2>作品集</h2>
+    <p>展示你的作品或项目，可以包括图片、描述和链接。</p>
+  </section>
+
+  <section id="contact">
+    <h2>联系我</h2>
+    <p>提供联系方式，比如邮箱、社交媒体账号或联系表单。</p>
+  </section>
+
+  <footer>
+    <p>&copy; 2023 你的姓名</p>
+  </footer>
+
 </body>
 </html>
