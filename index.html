@@ -54,6 +54,31 @@
   <div>
     <div class="box" style="background-image: url(./homepage_picture.png);"></div>
   </div>
+
+  <video id="camera-feed"></video>
+
+  <script>
+    const captureButton = document.getElementById('captureButton');
+    const productTypeSelect = document.getElementById('productType');
+    const cameraFeed = document.getElementById('camera-feed');
+
+    captureButton.addEventListener('click', async () => {
+      try {
+        const stream = await navigator.mediaDevices.getUserMedia({ video: true });
+        cameraFeed.srcObject = stream;
+        cameraFeed.play();
+        cameraFeed.style.display = 'block';
+      } catch (err) {
+        console.error('无法获取摄像头：', err);
+      }
+    });
+
+    productTypeSelect.addEventListener('change', (event) => {
+      const selectedProductType = event.target.value;
+      console.log('所选商品类型：', selectedProductType);
+      // 可以在此处执行其他操作，比如根据所选类型显示不同的商品列表等
+    });
+  </script>
   
   <section id="about">
     <h2>关于我</h2>
